@@ -24,12 +24,6 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
 
-    - name: Install dependencies
-      run: |
-        npm ci  # Use `npm ci` for faster, reproducible installations
-        npm run build --if-present
-      env:
-        NODE_ENV: development
 
     - name: Run tests
       run: npm test  # Replace with the appropriate test command
